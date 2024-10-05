@@ -38,8 +38,7 @@ Conditional masking offers several benefits:
 
 ## Data Masking Example with Atlas Sample Dataset
 
-**
-Data security is crucial. Use proper access controls to prevent unauthorized access. This example provides a simple introduction to data masking with MongoDB. Feel free to adjust it for your specific security requirements.**
+**Data security is crucial. Use proper access controls to prevent unauthorized access. This example provides a simple introduction to data masking with MongoDB. Feel free to adjust it for your specific security requirements.**
 
 ## Protecting Privacy: Unveiling the Power of Aggregation Framework for Data Masking
 
