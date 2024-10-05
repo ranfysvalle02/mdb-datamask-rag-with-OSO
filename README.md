@@ -278,6 +278,10 @@ response = az_client.chat.completions.create(
 )
 print(response.choices[0].message.content)
     
+```
+
+**Sample Output:**
+```
 """
 The context provided contains a list of comments about the movie "The Godfather" from various users. The comments span from the year 1970 to 2017. The users have used pseudonyms and their emails have been partially hidden for privacy reasons. 
 
@@ -289,7 +293,6 @@ The comments are not time-bound to the release of the movie, as they span over s
 
 In conclusion, while the data shows that "The Godfather" continues to generate discussion, the lack of specific content in the comments makes it difficult to understand the viewers' opinions about the movie.
 """
-
 ```
 
 **Conclusion:**
