@@ -12,34 +12,7 @@ Imagine AI models that can understand your questions and generate informative re
 * **Permutation:** Shuffle data elements to obscure relationships. For instance, rearrange the order of attributes in a dataset.
 * **Differential Privacy:** Add random noise to data to hide individual contributions.
 
-**Example:** In a medical dataset, replace specific patient names with generic identifiers like "Patient 123."
-
-### Secure Retrieval: Beyond the Basics
-
-* **Homomorphic Encryption:** Perform computations on encrypted data without decrypting it, ensuring privacy throughout the retrieval process.
-* **Secure Multi-Party Computation (MPC):** Distribute data across multiple parties, allowing for computations without any party revealing their private inputs.
-
-**Example:** Imagine a healthcare provider wants to analyze patient data from multiple hospitals without sharing the raw data. MPC can enable collaborative analysis while preserving patient privacy.
-
-### Privacy-Preserving Models: Going Beyond Federated Learning
-
-* **Secure Aggregation:** Aggregate data from multiple sources without revealing individual contributions.
-* **Privacy-Preserving Neural Networks:** Design neural networks that can operate on encrypted data, protecting privacy even during training.
-
-**Example:** A research institution can train a model on medical data from multiple hospitals without exposing sensitive patient information.
-
-### Privacy-Aware RAG Architecture: A Holistic Approach
-
-* **Privacy-Preserving Querying:** Use techniques like differential privacy to protect user queries from being linked to individual responses.
-* **Secure Response Generation:** Employ privacy-preserving techniques like homomorphic encryption to generate responses without revealing sensitive information.
-
 **Example:** A chatbot can answer user questions about medical conditions while protecting the privacy of both the user and the underlying data.
-
-### Continuous Monitoring: A Vigilant Approach
-
-* **Regular Privacy Audits:** Conduct thorough audits to identify and address privacy vulnerabilities.
-* **Privacy Impact Assessments (PIAs):** Evaluate the potential privacy risks of RAG systems before deployment.
-* **Privacy by Design:** Incorporate privacy considerations into the development process from the beginning.
 
 ## OSO Cloud: Conditional Masking for GenAI Systems
 
@@ -98,6 +71,68 @@ Now, with our masked data set, we can feed it to a separate tool (like OpenAI's 
 - **Flexibility:** You can choose which fields to mask and the masking method (e.g., initials, redaction, etc.).
 - **Efficiency:** It operates directly on your data set, avoiding complex code or data exports.
 - **Security:**  Original data remains untouched, protecting sensitive information.
+
+### Prerequisites
+
+* **MongoDB Tools:**
+  * **mongosh:** The official MongoDB shell for interacting with MongoDB databases.
+  * **mongorestore:** A tool for restoring data from a dump file to a MongoDB database.
+* **Docker:** Installed on your system ([https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/))
+* **wget or curl:** Installed on your system (package managers usually handle this)
+
+
+### Setting Up a Local Atlas Environment
+
+1. **Pull the Docker Image:**
+
+   * **Latest Version:**
+     ```bash
+     docker pull mongodb/mongodb-atlas-local
+     ```
+
+2. **Run the Database:**
+
+   ```bash
+   docker run -p 27017:27017 mongodb/mongodb-atlas-local
+   ```
+   This command runs the Docker image, exposing port 27017 on your machine for connecting to the database.
+
+### Using Sample Datasets with MongoDB
+
+This section demonstrates downloading and exploring a sample dataset for MongoDB on your local system.
+
+#### Downloading the Dataset
+
+There's a complete sample dataset available for MongoDB. Download it using either `wget` or `curl`:
+
+* **Using wget:**
+
+```bash
+wget https://atlas-education.s3.amazonaws.com/sampledata.archive
+```
+
+* **Using curl:**
+
+```bash
+curl https://atlas-education.s3.amazonaws.com/sampledata.archive -o sampledata.archive
+```
+
+**Note:**
+
+* Ensure you have `wget` or `curl` installed.
+* The downloaded file will be named `sampledata.archive`.
+
+#### Restoring the Dataset
+
+Before restoring, ensure you have a local `mongod` instance running (either existing or newly started). This instance will host the dataset.
+
+**To restore the dataset:**
+
+```bash
+mongorestore --archive=sampledata.archive
+```
+
+This command uses the `mongorestore` tool to unpack the downloaded archive (`sampledata.archive`) and populate your local `mongod` instance with the sample data.
 
 **Full Code:**
 ```python
