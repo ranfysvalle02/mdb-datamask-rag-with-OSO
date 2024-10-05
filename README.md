@@ -41,11 +41,9 @@ Imagine AI models that can understand your questions and generate informative re
 * **Privacy Impact Assessments (PIAs):** Evaluate the potential privacy risks of RAG systems before deployment.
 * **Privacy by Design:** Incorporate privacy considerations into the development process from the beginning.
 
-## OSO Cloud: The Key to Conditional Masking in GenAI
+## OSO Cloud: Conditional Masking for GenAI Systems
 
 **OSO Cloud** is a powerful authorization platform that can significantly enhance the security and privacy of your generative AI (GenAI) systems. By integrating OSO Cloud into your GenAI pipeline, you can dynamically determine whether to apply masking techniques based on the authorization status of the user or process.
-
-### Conditional Masking with OSO Cloud
 
 Here's how OSO Cloud can help you implement conditional masking:
 
