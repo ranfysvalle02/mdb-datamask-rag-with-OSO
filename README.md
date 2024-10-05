@@ -134,9 +134,26 @@ mongorestore --archive=sampledata.archive
 
 This command uses the `mongorestore` tool to unpack the downloaded archive (`sampledata.archive`) and populate your local `mongod` instance with the sample data.
 
+#### Run the Script:
+
+* From your terminal, run `python3 demo.py`
+
 **Full Code:**
 ```python
 import pymongo, openai
+from oso_cloud import Oso
+
+api_key = "<api-key-goes-here>"
+oso = Oso(url="https://cloud.osohq.com", api_key=api_key)
+actor = {"type": "User", "id": "1233"}
+resource = {"type": "Repository", "id": "456"}
+
+def test_oso():
+  if not oso.authorize(actor, "view", resource):
+    # Handle authorization failure
+    return "unauthorized by oso"
+  return "authorized by oso"
+
 AZURE_OPENAI_ENDPOINT = "https://.openai.azure.com"
 AZURE_OPENAI_API_KEY = "" 
 deployment_name = "gpt-4-32k"  # The name of your model deployment
@@ -145,7 +162,7 @@ USER_ROLE='user' # user or admin
 mdb_client = pymongo.MongoClient('mongodb://localhost:27017?directConnection=true')
 db = mdb_client['sample_mflix']
 pipeline = []
-if USER_ROLE=='user':    
+if test_oso() != "authorized by oso":    
     pipeline = [
         {
             '$lookup': {
@@ -203,7 +220,7 @@ if USER_ROLE=='user':
             }
         }
     ]
-elif USER_ROLE=='admin':
+elif test_oso() == "authorized by oso":
     pipeline = [
         {
             '$lookup': {
@@ -268,6 +285,7 @@ The comments are not time-bound to the release of the movie, as they span over s
 
 In conclusion, while the data shows that "The Godfather" continues to generate discussion, the lack of specific content in the comments makes it difficult to understand the viewers' opinions about the movie.
 """
+
 ```
 
 **Conclusion:**
