@@ -1,5 +1,7 @@
 # mdb-datamask-rag-with-OSO
 
+![OSO](oso-rules.png)
+
 ## Unleashing Insights While Protecting Privacy: A Look at Privacy-Focused RAG
 
 Imagine AI models that can understand your questions and generate informative responses by tapping into vast stores of knowledge. That's the power of RAG. However, with great power comes great responsibility, especially when handling sensitive data. This is where **privacy-focused RAG** comes in.
@@ -17,6 +19,8 @@ Imagine AI models that can understand your questions and generate informative re
 ## Conditional Masking for GenAI Systems
 
 **OSO Cloud** is a powerful authorization platform that can significantly enhance the security and privacy of your generative AI (GenAI) systems. By integrating OSO Cloud into your GenAI pipeline, you can dynamically determine whether to apply masking techniques based on the authorization status of the user or process.
+
+![OSO](oso-facts.png)
 
 Here's how OSO Cloud can help you implement conditional masking:
 
