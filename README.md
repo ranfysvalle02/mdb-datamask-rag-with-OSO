@@ -14,7 +14,7 @@ Imagine AI models that can understand your questions and generate informative re
 
 **Example:** A chatbot can answer user questions about medical conditions while protecting the privacy of both the user and the underlying data.
 
-## OSO Cloud: Conditional Masking for GenAI Systems
+## Conditional Masking for GenAI Systems
 
 **OSO Cloud** is a powerful authorization platform that can significantly enhance the security and privacy of your generative AI (GenAI) systems. By integrating OSO Cloud into your GenAI pipeline, you can dynamically determine whether to apply masking techniques based on the authorization status of the user or process.
 
