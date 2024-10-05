@@ -6,7 +6,7 @@
 
 Imagine AI models that can understand your questions and generate informative responses by tapping into vast stores of knowledge. That's the power of RAG. However, with great power comes great responsibility, especially when handling sensitive data. This is where **privacy-focused RAG** comes in.
 
-**Retrieval-Augmented Generation (RAG)**, while powerful, poses unique privacy challenges. Here's a deeper look into the strategies to mitigate these risks:
+**Retrieval-Augmented Generation (RAG)**, while powerful, poses unique privacy challenges. Here are data anonymization strategies to mitigate these risks:
 
 ### Data Anonymization: A Closer Look
 
