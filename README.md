@@ -38,11 +38,8 @@ Conditional masking offers several benefits:
 
 ## Data Masking Example with Atlas Sample Dataset
 
-**Important Notes:**
-
-* Ensure proper access controls (RBAC) are implemented to restrict access to sensitive data.
-
-This example provides a basic understanding of data masking using MongoDB's aggregation pipeline. You can customize it further to meet your specific data security needs. 
+**
+Data security is crucial. Use proper access controls to prevent unauthorized access. This example provides a simple introduction to data masking with MongoDB. Feel free to adjust it for your specific security requirements.**
 
 ## Protecting Privacy: Unveiling the Power of Aggregation Framework for Data Masking
 
