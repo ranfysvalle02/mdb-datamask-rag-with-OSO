@@ -136,7 +136,11 @@ This command uses the `mongorestore` tool to unpack the downloaded archive (`sam
 
 #### Run the Script:
 
-* From your terminal, run ```python3 demo.py```
+* From your terminal, run
+
+```
+python3 demo.py
+```
 
 **Full Code:**
 ```python
